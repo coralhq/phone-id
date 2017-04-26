@@ -1,5 +1,7 @@
 # Phone Number Generator - Indonesia
 
+[![Build Status](https://travis-ci.org/coralhq/phone-id.svg?branch=master)](https://travis-ci.org/coralhq/phone-id)
+
 This library generates Indonesian phone number. Numbers may or may not be valid.
 
 ## Generating Phone Numbers
