@@ -6,8 +6,6 @@ import unittest
 
 import phoneid
 
-from phonenumbers.phonenumberutil import NumberParseException
-
 class GeneratorTest(unittest.TestCase):
 
     @nottest
@@ -36,9 +34,9 @@ class GeneratorTest(unittest.TestCase):
         ok_(phoneid.is_valid_number(number=result) == True,
             msg='Generated number must be valid Indonesia number')
 
-    @raises(NumberParseException)
-    def test_number_validator_invalid_number_throws_exception(self):
-        phoneid.is_valid_number(number='not-a-number')
+    def test_number_validator_invalid_number_returns_false(self):
+        ok_(phoneid.is_valid_number(number='not-a-number') == False
+            msg='Invalid number should return false')
 
     def test_random_number_generator_length_should_be_valid(self):
         from phoneid.xl import PREFIXES
