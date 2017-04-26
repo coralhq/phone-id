@@ -1,2 +1,2 @@
 phonenumbers
-nosetests tests
+nose
