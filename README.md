@@ -71,10 +71,10 @@ number_is_valid = phoneid.is_valid_number(number)
 
 ## Using
 
-For some reason [PyPI](https://pypi.python.org/pypi) keeps on failing when uploading. To use this with your projects, you can add this in your `requirements.txt`:
+Add this in your `requirements.txt`:
 
 ```
--e git://github.com/coralhq/phone-id.git#egg=phoneid
+phoneid
 ```
 
 ## License
