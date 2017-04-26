@@ -8,6 +8,7 @@ from .telkomsel import PREFIXES as TELKOMSEL_PREFIXES
 from .three import PREFIXES as THREE_PREFIXES
 from .xl import PREFIXES as XL_PREFIXES
 import random
+import phonenumbers
 
 
 def anything(length=8, international_prefix=False):
@@ -73,3 +74,11 @@ def generate_random_number(prefixes, length=8, international_prefix=False):
     intl = '+62' if international_prefix else '0'
 
     return intl + prefix + number
+
+def is_valid_number(number):
+    try:
+        number = phonenumbers.parse(number, 'ID')
+    except:
+        return False
+
+    return phonenumbers.is_possible_number(number)

@@ -7,7 +7,7 @@ import unittest
 
 class GeneratorTest(unittest.TestCase):
 
-	def test_anything(self):
+	def test_anything_not_internationally_prefixed(self):
 		length = 8
 		international_prefix = False
 

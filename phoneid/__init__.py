@@ -8,3 +8,4 @@ from .generator import smartfren
 from .generator import telkomsel
 from .generator import three
 from .generator import xl
+from .generator import is_valid_number
