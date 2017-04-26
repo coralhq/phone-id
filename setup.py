@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
   name = 'phoneid',
   packages = ['phoneid'],
-  version = '0.1.2',
+  version = '0.1.3',
   description = 'A library to generate Indonesian phone numbers',
   author = 'Batista Harahap',
   author_email = 'batista@bango29.com',
