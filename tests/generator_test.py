@@ -35,7 +35,7 @@ class GeneratorTest(unittest.TestCase):
             msg='Generated number must be valid Indonesia number')
 
     def test_number_validator_invalid_number_returns_false(self):
-        ok_(phoneid.is_valid_number(number='not-a-number') == False
+        ok_(phoneid.is_valid_number(number='not-a-number') == False,
             msg='Invalid number should return false')
 
     def test_random_number_generator_length_should_be_valid(self):
