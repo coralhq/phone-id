@@ -8,7 +8,6 @@ from .telkomsel import PREFIXES as TELKOMSEL_PREFIXES
 from .three import PREFIXES as THREE_PREFIXES
 from .xl import PREFIXES as XL_PREFIXES
 import random
-import phonenumbers
 
 
 def anything(length=8, international_prefix=False):
@@ -39,7 +38,7 @@ def lippo(length=8, international_prefix=False):
                                   international_prefix=international_prefix)
 
 def sampoerna(length=8, international_prefix=False):
-    return generate_random_number(prefixes=SAMPOERNA_PREFIXES_PREFIXES,
+    return generate_random_number(prefixes=SAMPOERNA_PREFIXES,
                                   length=length,
                                   international_prefix=international_prefix)
 
@@ -76,6 +75,8 @@ def generate_random_number(prefixes, length=8, international_prefix=False):
     return intl + prefix + number
 
 def is_valid_number(number):
+    import phonenumbers
+    
     try:
         number = phonenumbers.parse(number, 'ID')
     except:
