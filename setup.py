@@ -1,4 +1,5 @@
-from distutils.core import setup
+from setuptools import setup
+
 setup(
   name = 'phoneid',
   packages = ['phoneid'],
@@ -9,5 +10,8 @@ setup(
   url = 'https://github.com/coralhq/phone-id',
   download_url = 'hhttps://github.com/coralhq/phone-id/archive/0.1.tar.gz',
   keywords = ['phone', 'number', 'indonesia', 'telco'],
+  install_requires = [
+    'phonenumbers'
+  ],
   classifiers = [],
 )
